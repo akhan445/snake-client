@@ -1,28 +1,29 @@
+const { UP, RIGHT, DOWN, LEFT, WATCH_OUT, HUNGRY } = require("./constants")
 const handleUserInput = function (key) {
   // your code here
   switch(key) {
     case '\u0003':
       process.exit();
-    case 'w':
+    case UP:
       connection.write("Move: up");
       console.log("Move: up");
       break;
-    case 'a':
+    case LEFT:
       connection.write("Move: left");
       console.log("Move: left");
       break;
-    case 's':
+    case DOWN:
       connection.write("Move: down");
       console.log("Move: down");
       break;
-    case 'd':
+    case RIGHT:
       connection.write("Move: right");
       console.log("Move: right");
       break;
-    case 'q':
+    case WATCH_OUT:
       connection.write("Say: Watch it, I'm sliding here");
       break;
-    case 'e':
+    case HUNGRY:
       connection.write("Say: I'm hungry...");
        break;
   }
